@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeffrey | IT Architect & Digital Strategist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="network-canvas"></canvas>
+
+    <div id="preloader">
+        <div class="boot-sequence" id="boot-text"></div>
+        <div class="loader-content" id="loader-content" style="opacity: 0;">
+            <div class="glitch-logo" data-text="JEFFREY.">JEFFREY<span class="accent-dot">.</span></div>
+            <div class="loading-bar"><div class="loading-progress"></div></div>
+            <div class="loading-text">ACCESS GRANTED...</div>
+        </div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <button id="terminal-toggle" class="hover-target" aria-label="Open Terminal">_</button>
+
+    <div id="terminal-window" class="glass-panel">
+        <div class="terminal-header" id="terminal-header">
+            <div class="terminal-buttons">
+                <span class="close-btn hover-target" id="terminal-close"></span>
+                <span class="min-btn"></span>
+                <span class="max-btn"></span>
+            </div>
+            <div class="terminal-title">jeffrey@0x6558f: ~/interactive_console</div>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+            <div id="terminal-output">
+                <p>Welcome to JeffreyOS v2.0.</p>
+                <p>Type <span class="term-cmd">'help'</span> to see available commands.</p>
+            </div>
+            <div class="terminal-input-line">
+                <span class="term-cmd">$ jeffrey:~# </span>
+                <input type="text" id="term-input" autocomplete="off" spellcheck="false" autofocus>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
+    </div>
+
+    <nav id="navbar">
+        <div class="nav-wrapper">
+            <a href="#home" class="brand-logo hover-target glitch-hover">JEFFREY<span class="accent-dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about" class="hover-target">About</a></li>
+                <li><a href="#capabilities" class="hover-target">Capabilities</a></li>
+                <li><a href="#framework" class="hover-target">Framework</a></li>
+                <li><a href="#projects" class="hover-target">Blueprints</a></li>
+                <li><a href="#manifestos" class="hover-target">Insights</a></li>
+                <li><a href="#contact" class="hover-target">Connect</a></li>
+            </ul>
+            <div class="menu-toggle hover-target">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="hero-content reveal">
+            <div class="status-badge">🟢 Neural Matrix Online | System Architect</div>
+            <h1 class="hero-title text-reveal">I Don't Follow Systems.<br><span class="gradient-text">I Engineer Them.</span></h1>
+            <h2 class="hero-subtitle">
+                <span id="typed-text"></span><span class="cursor">&nbsp;</span>
+            </h2>
+            <div class="btn-group">
+                <a href="#projects" class="btn btn-primary magnetic-btn hover-target">Explore Intelligence</a>
+                <a href="#cv-download" class="btn btn-cyber magnetic-btn hover-target glitch-hover" onclick="alert('Encrypted Payload (CV) Request Intercepted. Preparing Download...')">Access Encrypted CV</a>
+            </div>
+            
+            <div class="hero-stats reveal delay-2">
+                <div class="stat-item"><span class="stat-number">IT</span><span class="stat-label">Infrastructure</span></div>
+                <div class="divider"></div>
+                <div class="stat-item"><span class="stat-number">Growth</span><span class="stat-label">Architecture</span></div>
+                <div class="divider"></div>
+                <div class="stat-item"><span class="stat-number">Cyber</span><span class="stat-label">Awareness</span></div>
+            </div>
+        </div>
+        
+        <div class="hero-visual reveal delay-1 tilt-card hover-target">
+            <div class="hologram-ring"></div>
+            <div class="scanlines"></div>
+            <img src="assets/images/profile.png" alt="Jeffrey Profile" class="profile-img">
+        </div>
+    </header>
+
+    <section id="about" class="container reveal">
+        <div class="section-header">
+            <h2 class="section-title">The Architect Mindset</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-text glass-panel tilt-card">
+                <p>I am Ibrahim (Jeffrey)—a hybrid Digital Strategist and IT Specialist operating at the exact intersection of technical infrastructure, human behavior, and digital security. I don't just plan marketing campaigns; I engineer the technical foundations that make them scalable and secure.</p>
+                <p>Backed by official credentials from Google, ITI, and HubSpot, my expertise spans from diagnosing technical support fundamentals to orchestrating advanced CRM architectures, SEO deployments, and threat analysis. Whether it's securing a network, optimizing a user interface, or positioning a brand, I build systems that perform and dominate.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="container reveal">
+        <div class="section-header">
+            <h2 class="section-title">Core Capabilities</h2>
+            <div class="title-underline"></div>
+            <p style="margin-top: 1rem; color: var(--text-secondary);">The triad of modern digital dominance.</p>
+        </div>
+        <div class="projects-grid">
+            <div class="glass-panel tilt-card hover-target" style="border-top: 3px solid var(--accent-purple);">
+                <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-primary);">Digital Brand Positioning</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Architecting perception. I use audience psychology, SEO, and paid acquisition to build authoritative digital footprints that convert attention into equity.</p>
+            </div>
+            <div class="glass-panel tilt-card hover-target" style="border-top: 3px solid var(--accent-it);">
+                <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-primary);">IT Infrastructure & Security</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Ensuring operational continuity. Deploying network fundamentals, Linux administration, hardware troubleshooting, and proactive cyber threat awareness.</p>
+            </div>
+            <div class="glass-panel tilt-card hover-target" style="border-top: 3px solid var(--accent-neon);">
+                <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-primary);">Automation & CRM Systems</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Designing scalable workflows. Integrating HubSpot CRM architectures, analyzing user flows, and structuring interfaces (UI/UX) to maximize retention.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="framework" class="container reveal">
+        <div class="section-header">
+            <h2 class="section-title">The Architect's Framework</h2>
+            <div class="title-underline"></div>
+            <p style="margin-top: 1rem; color: var(--text-secondary);">A systematic approach to engineering growth and security.</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item tilt-card glass-panel hover-target reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="phase-tag">Phase 01</span>
+                    <h3>Audit & Reconnaissance</h3>
+                    <p>Deep analysis of existing infrastructure, market gaps, target audience psychology, and potential security vulnerabilities.</p>
+                </div>
+            </div>
+            <div class="timeline-item tilt-card glass-panel hover-target reveal delay-1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="phase-tag">Phase 02</span>
+                    <h3>System Architecture</h3>
+                    <p>Structuring the foundational layer. Setting up CRM environments, optimizing UI/UX flow, and establishing secure IT protocols.</p>
+                </div>
+            </div>
+            <div class="timeline-item tilt-card glass-panel hover-target reveal delay-2">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="phase-tag">Phase 03</span>
+                    <h3>Tactical Execution</h3>
+                    <p>Deploying high-leverage digital strategies. Executing Meta ad campaigns, SEO strategies, and content syndication.</p>
+                </div>
+            </div>
+            <div class="timeline-item tilt-card glass-panel hover-target reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="phase-tag">Phase 04</span>
+                    <h3>Security & Optimization</h3>
+                    <p>Continuous monitoring. Analyzing data loops, patching vulnerabilities, and scaling the break-even points for maximum ROI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <div class="section-header reveal">
+            <h2 class="section-title">Strategic Arsenal & Stack</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category glass-panel tilt-card reveal">
+                <div class="category-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accent-icon"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                    <h3>IT Operations & Security</h3>
+                </div>
+                <div class="skill-item"><div class="skill-info"><span>IT Technical Support (Google)</span><span>95%</span></div><div class="progress-track"><div class="progress-fill" data-target="95%"></div></div></div>
+                <div class="skill-item"><div class="skill-info"><span>Hardware & Network Fundamentals</span><span>88%</span></div><div class="progress-track"><div class="progress-fill" data-target="88%"></div></div></div>
+                <div class="skill-item"><div class="skill-info"><span>Cyber Threat Awareness</span><span>88%</span></div><div class="progress-track"><div class="progress-fill" data-target="88%"></div></div></div>
+                <div class="skill-item"><div class="skill-info"><span>Linux Administration</span><span>85%</span></div><div class="progress-track"><div class="progress-fill" data-target="85%"></div></div></div>
+            </div>
+
+            <div class="skill-category glass-panel tilt-card reveal delay-1">
+                <div class="category-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accent-icon"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h3>Strategy, UI/UX & Growth</h3>
+                </div>
+                <div class="skill-item"><div class="skill-info"><span>Digital Strategy & SEO</span><span>95%</span></div><div class="progress-track"><div class="progress-fill" data-target="95%"></div></div></div>
+                <div class="skill-item"><div class="skill-info"><span>CRM Architecture (HubSpot)</span><span>90%</span></div><div class="progress-track"><div class="progress-fill" data-target="90%"></div></div></div>
+                <div class="skill-item"><div class="skill-info"><span>Meta Ads & Audience Psychology</span><span>92%</span></div><div class="progress-track"><div class="progress-fill" data-target="92%"></div></div></div>
+                <div class="skill-item"><div class="skill-info"><span>Interface Structuring (UI/UX)</span><span>88%</span></div><div class="progress-track"><div class="progress-fill" data-target="88%"></div></div></div>
+            </div>
+        </div>
+
+        <div class="stack-grid reveal delay-2">
+            <span class="stack-badge hover-target">Kali Linux</span>
+            <span class="stack-badge hover-target">Nmap</span>
+            <span class="stack-badge hover-target">HTML5/CSS3</span>
+            <span class="stack-badge hover-target">Vanilla JS</span>
+            <span class="stack-badge hover-target">HubSpot CRM</span>
+            <span class="stack-badge hover-target">Meta Ads Manager</span>
+            <span class="stack-badge hover-target">Google Analytics</span>
+            <span class="stack-badge hover-target">Figma</span>
+            <span class="stack-badge hover-target">VS Code</span>
+            <span class="stack-badge hover-target">TryHackMe</span>
+        </div>
+    </section>
+
+    <section id="credentials" class="container">
+        <div class="section-header reveal">
+            <h2 class="section-title">Certified Intelligence</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="credentials-grid">
+            <div class="cert-card cert-linux tilt-card reveal hover-target">
+                <div class="cert-issuer term-text">root@linux:~# credentials</div>
+                <h3 class="cert-title term-title">Linux System Administration<span class="blink">_</span></h3>
+                <p class="cert-date term-text">Verified Competency</p>
+                <div class="cert-tag Cyber-tag">Cyber Infrastructure</div>
+            </div>
+            <div class="cert-card glass-panel tilt-card reveal delay-1 hover-target">
+                <div class="cert-issuer">Google / Coursera</div><h3 class="cert-title">IT Technical Support Fundamentals</h3><p class="cert-date">October 2023</p><div class="cert-tag IT-tag">IT Operations</div>
+            </div>
+            <div class="cert-card glass-panel tilt-card reveal delay-2 hover-target">
+                <div class="cert-issuer">ITI</div><h3 class="cert-title">Start Your Career in Digital Marketing</h3><p class="cert-date">October 2023</p><div class="cert-tag Strategy-tag">Digital Strategy</div>
+            </div>
+            <div class="cert-card glass-panel tilt-card reveal hover-target">
+                <div class="cert-issuer">HubSpot / Coursera</div><h3 class="cert-title">Introduction to CRM Architecture</h3><p class="cert-date">October 2023</p><div class="cert-tag Tech-tag">Systems & Data</div>
+            </div>
+            <div class="cert-card glass-panel tilt-card reveal delay-1 hover-target">
+                <div class="cert-issuer">Meta / Coursera</div><h3 class="cert-title">Social Media Marketing Professional</h3><p class="cert-date">Validated Competency</p><div class="cert-tag Marketing-tag">Acquisition</div>
+            </div>
+            <div class="cert-card glass-panel tilt-card reveal delay-2 hover-target">
+                <div class="cert-issuer">Google</div><h3 class="cert-title">IT Security: Defense against digital dark arts</h3><p class="cert-date">Verified Competency</p><div class="cert-tag Cyber-tag">Security Foundation</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <div class="section-header reveal">
+            <h2 class="section-title">Strategic Blueprints & IT Systems</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card glass-panel tilt-card reveal hover-target border-it">
+                <div class="project-tag tag-it">IT Infrastructure</div>
+                <h3 class="project-title">Enterprise IT Architecture</h3>
+                <p class="project-desc">A comprehensive blueprint for deploying, securing, and maintaining scalable technical networks. Focuses on hardware optimization, advanced troubleshooting, and secure CRM system deployments.</p>
+                <div class="project-stack"><span>IT Support</span><span>Network Security</span><span>System Admin</span></div>
+            </div>
+            <div class="project-card glass-panel tilt-card reveal delay-1 hover-target border-analytical">
+                <div class="project-tag tag-analytical">Analytical System</div>
+                <h3 class="project-title">Break-Even Analyzer Pro</h3>
+                <p class="project-desc">A sophisticated financial and strategic web application designed to calculate break-even points dynamically. Features a comprehensive <strong>Financial Concepts Guide</strong>.</p>
+                <div class="project-stack"><span>Strategic Analysis</span><span>JS/ES6</span><span>Data Modeling</span></div>
+            </div>
+            <div class="project-card glass-panel tilt-card reveal delay-2 hover-target border-influence">
+                <div class="project-tag tag-influence">Influence Execution</div>
+                <h3 class="project-title">Digital Partner Architecture</h3>
+                <p class="project-desc">Real-world execution acting as a Digital Partner. Orchestrated social media positioning, CRM integrations, SEO deployments, and audience retention loops.</p>
+                <div class="project-stack"><span>SEO</span><span>CRM Integration</span><span>Brand Growth</span></div>
+            </div>
+            <div class="project-card glass-panel tilt-card reveal hover-target border-cyber">
+                <div class="project-tag tag-cyber">Security Research</div>
+                <h3 class="project-title">Cyber Documentation Hub</h3>
+                <p class="project-desc">A structured research environment documenting defensive strategies, IT troubleshooting flows, Linux administration, and essential security tools.</p>
+                <div class="project-stack"><span>Threat Analysis</span><span>Linux OS</span><span>Documentation</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cyber" class="container reveal">
+        <div class="section-header">
+            <h2 class="section-title">Cyber Presence</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="thm-wrapper glass-panel tilt-card hover-target">
+            <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5641973" style="border:none;" title="TryHackMe Badge"></iframe> 
+            <img src="https://tryhackme-badges.s3.amazonaws.com/jeffreysec01.png" alt="TryHackMe Badge" />
+        </div>
+    </section>
+
+    <section id="manifestos" class="container reveal">
+        <div class="section-header">
+            <h2 class="section-title">Strategic Manifestos</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="projects-grid">
+            <div class="glass-panel tilt-card hover-target manifesto-card">
+                <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-neon)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
+                <h3>Why Marketing Needs IT & Security</h3>
+                <p>Growth is useless if the system collapses. True digital dominance requires the seamless integration of marketing psychology with resilient IT infrastructure and cyber threat awareness.</p>
+            </div>
+            <div class="glass-panel tilt-card hover-target manifesto-card">
+                <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
+                <h3>Systems Over Hacks</h3>
+                <p>Short-term growth hacks fade. I engineer long-term systems—from robust CRM pipelines to flawless UI/UX structures—that generate compounding equity and sustainable leverage.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container reveal">
+        <div class="vision-box glass-panel glow-border tilt-card hover-target" style="margin-bottom: 4rem;">
+            <h2>The Vision</h2>
+            <p>To establish undeniable long-term digital authority by mastering the architecture of influence. True power in the modern era relies on system design thinking—understanding how interfaces dictate behavior, how marketing shapes perception, and how IT security preserves integrity. My trajectory is focused on constructing these strategic positions, engineering growth, and securing the digital assets of the future.</p>
+        </div>
+
+        <div class="section-header">
+            <h2 class="section-title">Establish Contact</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="contact-wrapper glass-panel tilt-card">
+            <div class="contact-info">
+                <h3>Let's Architect the Future</h3>
+                <p>Open for IT operations, strategic consulting, and high-level networking.</p>
+            </div>
+            <div class="social-grid">
+                <a href="mailto:jeffreysec01@gmail.com" class="social-card hover-target">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span>jeffreysec01@gmail.com</span>
+                </a>
+                <a href="https://eg.linkedin.com/in/0x6558f" target="_blank" rel="noopener noreferrer" class="social-card hover-target">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    <span>LinkedIn Professional</span>
+                </a>
+                <a href="https://www.instagram.com/0x6558f/" target="_blank" rel="noopener noreferrer" class="social-card hover-target">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    <span>Instagram Network</span>
+                </a>
+                <a href="https://tryhackme.com/p/jeffreysec01" target="_blank" rel="noopener noreferrer" class="social-card hover-target" style="border-color: #ff2a2a; color: #ff2a2a;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <span>TryHackMe Cyber</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ibrahim (Jeffrey). IT Architect & Digital Strategist. Built with Systems Thinking.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
