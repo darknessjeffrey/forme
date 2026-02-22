@@ -160,6 +160,13 @@ nav.sticky { background: var(--nav-bg); backdrop-filter: blur(20px); border-bott
 .cert-linux:hover { box-shadow: 0 15px 40px rgba(74, 222, 128, 0.25) !important; }
 .cert-linux .term-text { color: #888; font-family: var(--terminal-font); text-transform: lowercase; font-weight: normal; }
 .cert-linux .term-title { color: var(--accent-it); font-family: var(--terminal-font); font-size: 1.15rem; letter-spacing: -0.5px; }
+
+/* ---- TryHackMe Custom Cert ---- */
+.cert-thm { background: rgba(15, 5, 5, 0.95) !important; border-left: 4px solid var(--accent-error) !important; border-top: 1px solid rgba(255, 42, 42, 0.15); box-shadow: 0 10px 30px rgba(255, 42, 42, 0.08); cursor: none;}
+.cert-thm:hover { box-shadow: 0 15px 40px rgba(255, 42, 42, 0.25) !important; }
+.cert-thm .term-text { color: #888; font-family: var(--terminal-font); font-weight: normal; }
+.cert-thm .term-title { color: var(--accent-error); font-family: var(--terminal-font); font-size: 1.15rem; letter-spacing: -0.5px; }
+
 .blink { animation: blink 1s step-end infinite; }
 .Cyber-tag { background: rgba(255, 42, 42, 0.1); color: #ff2a2a; border: 1px solid #ff2a2a; }
 @keyframes blink { 50% { opacity: 0; } }
